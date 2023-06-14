@@ -20,7 +20,7 @@ export default function SignupPage() {
 
       <p className='text-[#4D4D4D]'>
         Vous avez déjà un compte ?{' '}
-        <Link className='text-primary underline' href={'/auth/signin'}>
+        <Link className='text-primary underline' href={'/signin'}>
           Connectez-vous ici
         </Link>
       </p>

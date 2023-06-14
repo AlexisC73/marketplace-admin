@@ -11,7 +11,7 @@ export default function SigninPage() {
       <div className='flex flex-col gap-y-2'>
         <FormElement label='Mot de passe' name='password' />
         <Link
-          href={'/auth/forgot'}
+          href={'/forgotten-password'}
           className='self-end underline text-[#4D4D4D]'
         >
           Mot de passe oublié ?
@@ -24,7 +24,7 @@ export default function SigninPage() {
 
       <p className='text-[#4D4D4D]'>
         Vous n'avez pas encore de compte ?{' '}
-        <Link className='text-primary underline' href={'/auth/signup'}>
+        <Link className='text-primary underline' href={'/signup'}>
           Créez en un ici
         </Link>
       </p>
