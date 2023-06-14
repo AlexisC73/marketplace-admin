@@ -1,21 +1,34 @@
+'use client'
 import SubmitButton from '@/components/form/button/button'
 import FormElement from '@/components/form/input/input'
 import Link from 'next/link'
 import AuthForm from '../components/form/AuthForm'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
-import { redirect } from 'next/navigation'
+import { FormEventHandler } from 'react'
+import { signIn } from 'next-auth/react'
 
 export default async function SigninPage() {
-  const session = await getServerSession(authOptions)
-  if (session) {
-    redirect('/')
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault()
+    const data = new FormData(e.currentTarget)
+    const email = data.get('email')
+    const password = data.get('password')
+
+    signIn('credentials', {
+      email,
+      password,
+      redirect: true,
+      callbackUrl: '/',
+    })
   }
+
   return (
-    <AuthForm subTitle='Connectez-vous en remplissant vos informations'>
+    <AuthForm
+      handleSubmit={handleSubmit}
+      subTitle='Connectez-vous en remplissant vos informations'
+    >
       <FormElement label='Addresse email' name='email' />
       <div className='flex flex-col gap-y-2'>
-        <FormElement label='Mot de passe' name='password' />
+        <FormElement label='Mot de passe' name='password' type='password' />
         <Link
           href={'/forgotten-password'}
           className='self-end underline text-[#4D4D4D]'

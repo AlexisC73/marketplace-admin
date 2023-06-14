@@ -1,11 +1,14 @@
+'use client'
+
 import Brand from '@/components/brand/brand'
 
 interface Props {
   subTitle: string
   children: React.ReactNode
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
 }
 
-export default function AuthForm({ subTitle, children }: Props) {
+export default function AuthForm({ subTitle, children, handleSubmit }: Props) {
   return (
     <section className='flex items-center md:justify-center flex-col relative gap-y-10 w-full md:max-w-[640px] lg:max-w-[500px] px-8 mx-auto mt-5'>
       <div className='lg:absolute top-8 left-0 right-0 flex justify-center lb:m-auto'>
@@ -17,7 +20,9 @@ export default function AuthForm({ subTitle, children }: Props) {
         <p className='text-[#4D4D4D] text-center'>{subTitle}</p>
       </div>
 
-      <form className='w-full flex flex-col gap-y-5'>{children}</form>
+      <form onSubmit={handleSubmit} className='w-full flex flex-col gap-y-5'>
+        {children}
+      </form>
     </section>
   )
 }

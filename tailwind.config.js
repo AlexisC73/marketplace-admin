@@ -10,6 +10,12 @@ module.exports = {
       colors: {
         primary: '#085EC4',
       },
+      height: {
+        avatar_sm: '16px',
+      },
+      width: {
+        avatar_sm: '16px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
