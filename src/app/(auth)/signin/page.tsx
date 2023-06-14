@@ -1,10 +1,16 @@
 import SubmitButton from '@/components/form/button/button'
 import FormElement from '@/components/form/input/input'
-import Image from 'next/image'
 import Link from 'next/link'
 import AuthForm from '../components/form/AuthForm'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { redirect } from 'next/navigation'
 
-export default function SigninPage() {
+export default async function SigninPage() {
+  const session = await getServerSession(authOptions)
+  if (session) {
+    redirect('/')
+  }
   return (
     <AuthForm subTitle='Connectez-vous en remplissant vos informations'>
       <FormElement label='Addresse email' name='email' />

@@ -1,4 +1,6 @@
+import { getServerSession } from 'next-auth'
 import Image from 'next/image'
+import { authOptions } from '../api/auth/[...nextauth]/route'
 
 export default function RootLayout({
   children,
