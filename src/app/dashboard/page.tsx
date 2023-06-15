@@ -1,12 +1,11 @@
 import { requireSession } from '@/utils'
 import React from 'react'
-import Navbar from './Navbar/Navbar'
 
 export default async function Dashboard() {
   await requireSession()
   return (
-    <>
-      <Navbar />
-    </>
+    <div>
+      <h1>Coucou les amis</h1>
+    </div>
   )
 }
