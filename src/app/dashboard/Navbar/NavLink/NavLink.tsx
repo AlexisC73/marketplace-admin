@@ -19,7 +19,7 @@ export default function NavigationLink({
       } 2xl:justify-start text-[1.1rem] font-medium`}
     >
       <Link href={href} className='flex items-center gap-x-4'>
-        <span className='w-8 h-8 md:w-10 flex items-center justify-center'>
+        <span className='w-8 h-8 md:w-12 flex items-center justify-center'>
           {icon}
         </span>
         <p className={`${menuOpen ? '' : 'md:hidden'} 2xl:block`}>{label}</p>

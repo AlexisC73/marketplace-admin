@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className='overlay fixed inset-0 bg-black opacity-30'></div>
       )}
       <div
-        className={`w-4/6 ${isOpen ? 'md:w-[300px] md:px-4' : 'md:w-10'} ${
+        className={`w-4/6 ${isOpen ? 'md:w-[300px] md:px-4' : 'md:w-12'} ${
           isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'
         } 2xl:w-[400px] 2xl:px-4 bg-white fixed top-0 left-0 bottom-0 flex md:shadow-lg`}
       >
@@ -33,7 +33,7 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             className={`-right-10 ${
-              isOpen ? 'md:-right-10' : 'md:right-0'
+              isOpen ? 'md:-right-10' : 'md:left-1'
             } absolute 2xl:hidden`}
           >
             <SideBurger />
