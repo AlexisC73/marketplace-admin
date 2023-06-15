@@ -1,11 +1,12 @@
-import Header from '@/components/header/header'
 import { requireSession } from '@/utils'
+import React from 'react'
+import Navbar from './Navbar/Navbar'
 
 export default async function Dashboard() {
-  const { session } = await requireSession()
+  await requireSession()
   return (
     <>
-      <Header />
+      <Navbar />
     </>
   )
 }
