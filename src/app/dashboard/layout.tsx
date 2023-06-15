@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='fr'>
-      <body className='flex'>
+      <body>
         <NavBarLayout>{children}</NavBarLayout>
       </body>
     </html>
