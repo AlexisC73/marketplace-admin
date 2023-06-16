@@ -3,6 +3,7 @@ import FormAreaField from '@/components/form/area-field/FormAreaField'
 import FormImageField from '@/components/form/image-field/FormImageField'
 import FormElement from '@/components/form/input-field/input'
 import FormSection from './components/form-section/FormSection'
+import Link from 'next/link'
 
 export default function AddBookPage() {
   const pageBreadcrumbs = [
@@ -53,7 +54,7 @@ export default function AddBookPage() {
         <div className='fixed 2xl:static order-3 bottom-0 left-0 right-0 md:pl-12 2xl:pl-0'>
           <div className='mx-auto max-2xl:max-w-[1000px] w-full flex items-center justify-around bg-white py-4 rounded-lg '>
             <button>Enregistrer</button>
-            <button>Annuler</button>
+            <Link href={'/books'}>Annuler</Link>
           </div>
         </div>
       </form>

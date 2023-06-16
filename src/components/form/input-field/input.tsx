@@ -12,7 +12,7 @@ const FormElement = ({
   details?: string
 }) => {
   return (
-    <div className='flex flex-col gap-y-2 w-full'>
+    <div className='flex flex-col gap-y-2 2xl:text-[14px] w-full'>
       <label htmlFor={name}>
         {label}
         <span className='text-[12px] text-[#6b6b6b]'>{details}</span>

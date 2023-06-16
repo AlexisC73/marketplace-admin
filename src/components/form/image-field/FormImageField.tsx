@@ -11,7 +11,7 @@ export default function FormImageField() {
     <div className='flex flex-col gap-x-3'>
       <button
         onClick={handleClick}
-        className='w-full py-20 border border-dashed rounded-lg flex items-center flex-col justify-center'
+        className='w-full py-20 border hover:bg-[#fafafa] border-dashed rounded-lg flex items-center flex-col justify-center'
       >
         <ImageIcon className='text-[30px]' />
         <div className='text-center text-[14px] mt-4 flex flex-col gap-y-4'>

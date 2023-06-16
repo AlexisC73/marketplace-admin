@@ -81,7 +81,7 @@ export default function Navbar() {
 
 const SideBurger = () => {
   return (
-    <div className='w-10 h-10 flex items-center justify-center bg-white max-sm:bg-[#f5f5f5] text-[25px] rounded-r-md'>
+    <div className='w-10 h-10 flex items-center justify-center bg-white max-md:bg-[#f5f5f5] text-[25px] rounded-r-md'>
       <BurgerMenuIcon />
     </div>
   )
