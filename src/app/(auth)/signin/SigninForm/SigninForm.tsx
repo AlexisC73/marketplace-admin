@@ -1,7 +1,7 @@
 'use client'
 import React, { FormEventHandler } from 'react'
 import AuthForm from '../../components/form/AuthForm'
-import FormElement from '@/components/form/input/input'
+import FormElement from '@/components/form/input-field/input'
 import Link from 'next/link'
 import SubmitButton from '@/components/form/button/button'
 import { signIn } from 'next-auth/react'

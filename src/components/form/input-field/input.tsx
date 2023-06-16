@@ -3,15 +3,20 @@ const FormElement = ({
   name,
   type = 'text',
   currentValue,
+  details,
 }: {
   label: string
   name: string
   type?: string
   currentValue?: string | null
+  details?: string
 }) => {
   return (
     <div className='flex flex-col gap-y-2 w-full'>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        {label}
+        <span className='text-[12px] text-[#6b6b6b]'>{details}</span>
+      </label>
       <input
         className='bg-[#FAFAFA] border outline-none w-full h-[44px] rounded px-4'
         type={type}

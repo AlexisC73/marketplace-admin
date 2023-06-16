@@ -1,4 +1,4 @@
-import FormElement from '@/components/form/input/input'
+import FormElement from '@/components/form/input-field/input'
 import AuthForm from '../components/form/AuthForm'
 import SubmitButton from '@/components/form/button/button'
 import Link from 'next/link'

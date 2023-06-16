@@ -3,12 +3,14 @@ import Navbar from '@/components/Navbar/Navbar'
 export default function NavBarLayout({
   children,
 }: {
-  children: React.ReactNode
+  children?: React.ReactNode
 }) {
   return (
     <>
       <Navbar />
-      <main className='app md:pl-12 2xl:pl-[320px]'>{children}</main>
+      <main className='app md:pl-12 2xl:pl-[320px] flex-1 flex flex-col'>
+        {children}
+      </main>
     </>
   )
 }

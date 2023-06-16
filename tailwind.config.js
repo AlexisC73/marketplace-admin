@@ -16,6 +16,9 @@ module.exports = {
       width: {
         avatar_sm: '16px',
       },
+      gridTemplateColumns: {
+        '2xl-desktop': '1fr 400px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

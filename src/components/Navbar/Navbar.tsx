@@ -18,7 +18,7 @@ const NAV_LINKS = [
     href: '/dashboard',
     icon: <DashboardIcon />,
   },
-  { label: 'Livres', href: '/', icon: <BookIcon /> },
+  { label: 'Livres', href: '/books', icon: <BookIcon /> },
   { label: 'Ventes', href: '/sell', icon: <SellIcon /> },
   {
     label: 'Notifications',
@@ -49,7 +49,7 @@ export default function Navbar() {
       <div
         className={`w-4/6 ${isOpen ? 'md:w-[300px] md:px-4' : 'md:w-12'} ${
           isOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'
-        } 2xl:w-[320px] 2xl:px-4 bg-white fixed top-0 left-0 bottom-0 flex md:shadow-lg`}
+        } 2xl:w-[320px] 2xl:px-4 bg-white fixed top-0 left-0 bottom-0 flex md:shadow-lg z-50`}
       >
         <div className='hidden 2xl:flex absolute top-6 left-8'>
           <Brand />
