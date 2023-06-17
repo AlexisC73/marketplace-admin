@@ -5,11 +5,5 @@ export default function BooksPageLayout({
 }: {
   children?: React.ReactNode
 }) {
-  return (
-    <html lang='fr'>
-      <body>
-        <NavBarLayout>{children}</NavBarLayout>
-      </body>
-    </html>
-  )
+  return <NavBarLayout>{children}</NavBarLayout>
 }
