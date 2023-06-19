@@ -19,22 +19,22 @@ const NAV_LINKS = [
     icon: <DashboardIcon />,
   },
   { label: 'Livres', href: '/books', icon: <BookIcon /> },
-  { label: 'Ventes', href: '/sell', icon: <SellIcon /> },
-  {
-    label: 'Notifications',
-    href: '/notifications',
-    icon: <NotificationIcon />,
-  },
-  {
-    label: 'Litiges',
-    href: '/dispute',
-    icon: <ErrorIcon />,
-  },
-  {
-    label: 'Paramètres',
-    href: '/settings',
-    icon: <SettingIcon />,
-  },
+  // { label: 'Ventes', href: '/sell', icon: <SellIcon /> },
+  // {
+  //   label: 'Notifications',
+  //   href: '/notifications',
+  //   icon: <NotificationIcon />,
+  // },
+  // {
+  //   label: 'Litiges',
+  //   href: '/dispute',
+  //   icon: <ErrorIcon />,
+  // },
+  // {
+  //   label: 'Paramètres',
+  //   href: '/settings',
+  //   icon: <SettingIcon />,
+  // },
 ]
 
 export default function Navbar() {

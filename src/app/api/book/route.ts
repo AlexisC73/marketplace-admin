@@ -5,30 +5,39 @@ import { authOptions } from '../auth/[...nextauth]/route'
 import { sendApiResponse } from '@/utils/api-response'
 
 export async function POST(req: NextRequest) {
-  const session = await getServerSession(authOptions)
-  const formData = await req.formData()
-  const request = await fetch(`${env.API_URL}/book`, {
-    method: 'POST',
-    body: formData,
-    headers: {
-      Authorization: `Bearer ${session?.user.access_token}`,
-    },
-  })
-
-  if (request.ok) {
-    return sendApiResponse({
-      success: true,
-      data: { message: 'Book created successfully' },
-      status: 201,
-      statusText: 'Created',
+  try {
+    const session = await getServerSession(authOptions)
+    const formData = await req.formData()
+    const request = await fetch(`${env.API_URL}/book`, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Authorization: `Bearer ${session?.user.access_token}`,
+      },
     })
-  } else {
-    const response = await request.json()
+
+    if (request.ok) {
+      return sendApiResponse({
+        success: true,
+        data: { message: 'Book created successfully' },
+        status: 201,
+        statusText: 'Created',
+      })
+    } else {
+      const response = await request.json()
+      return sendApiResponse({
+        success: false,
+        error: response.message,
+        status: 400,
+        statusText: request.statusText,
+      })
+    }
+  } catch (err) {
     return sendApiResponse({
       success: false,
-      error: response.message,
+      error: 'Il y a une erreur de liaison avec le server.',
       status: 400,
-      statusText: request.statusText,
+      statusText: 'Bad Request',
     })
   }
 }

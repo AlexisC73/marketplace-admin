@@ -1,6 +1,8 @@
 import Breadcrumbs from '@/components/breadcrumbs/breadcrumbs'
+import { requireSession } from '@/utils'
 
-export default function BooksPage() {
+export default async function BooksPage() {
+  await requireSession()
   const pageBreadcrumbs = [
     {
       href: '/books',
