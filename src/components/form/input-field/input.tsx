@@ -4,13 +4,8 @@ const FormElement = ({
   type = 'text',
   currentValue,
   details,
-}: {
-  label: string
-  name: string
-  type?: string
-  currentValue?: string | null
-  details?: string
-}) => {
+  step,
+}: FormElementProps) => {
   return (
     <div className='flex flex-col gap-y-2 2xl:text-[14px] w-full'>
       <label htmlFor={name}>
@@ -23,9 +18,28 @@ const FormElement = ({
         name={name}
         id={name}
         placeholder={currentValue ?? ''}
+        step={step ?? 1}
       />
     </div>
   )
 }
 
 export default FormElement
+
+type FormElementProps =
+  | {
+      label: string
+      name: string
+      type?: string
+      currentValue?: string | null
+      details?: string
+      step?: number
+    }
+  | {
+      label: string
+      name: string
+      type: 'number'
+      currentValue?: string | null
+      details?: string
+      step?: number
+    }

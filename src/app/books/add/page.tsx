@@ -1,7 +1,9 @@
 import Breadcrumbs from '@/components/breadcrumbs/breadcrumbs'
 import AddBookForm from './components/form/AddBookForm'
+import { requireSession } from '@/utils'
 
-export default function AddBookPage() {
+export default async function AddBookPage() {
+  await requireSession()
   const pageBreadcrumbs = [
     {
       href: '/books',
@@ -14,8 +16,8 @@ export default function AddBookPage() {
   ]
 
   return (
-    <div className='flex-1 flex flex-col pb-24 max-2xl:max-w-[1000px] w-full mx-auto relative 2xl:px-10'>
-      <div className='pl-4 mt-10 bg-white md:bg-transparent py-4'>
+    <div className='pb-24'>
+      <div className='bg-white md:bg-transparent'>
         <Breadcrumbs breadcrumbs={pageBreadcrumbs} />
       </div>
       <h1 className='text-[20px] font-bold pl-4 bg-white md:bg-transparent md:pb-6'>

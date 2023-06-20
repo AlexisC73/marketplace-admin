@@ -13,11 +13,11 @@ import { SettingIcon } from '@/assets/Setting/setting'
 import { DashboardIcon } from '@/assets/Dashboard/dashboard'
 
 const NAV_LINKS = [
-  {
-    label: 'Tableau de bord',
-    href: '/dashboard',
-    icon: <DashboardIcon />,
-  },
+  // {
+  //   label: 'Tableau de bord',
+  //   href: '/dashboard',
+  //   icon: <DashboardIcon />,
+  // },
   { label: 'Livres', href: '/books', icon: <BookIcon /> },
   // { label: 'Ventes', href: '/sell', icon: <SellIcon /> },
   // {

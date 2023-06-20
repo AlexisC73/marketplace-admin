@@ -46,6 +46,7 @@ export default function AddBookForm() {
               details='(€)'
               name='price'
               type='number'
+              step={0.01}
             />
             <FormElement
               label='Date de publication'

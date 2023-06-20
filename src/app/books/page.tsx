@@ -1,5 +1,6 @@
 import Breadcrumbs from '@/components/breadcrumbs/breadcrumbs'
 import { requireSession } from '@/utils'
+import Link from 'next/link'
 
 export default async function BooksPage() {
   await requireSession()
@@ -11,8 +12,9 @@ export default async function BooksPage() {
   ]
   return (
     <>
-      <div className='ml-10 mt-3'>
+      <div>
         <Breadcrumbs breadcrumbs={pageBreadcrumbs} />
+        <Link href={'/books/add'}>Ajouter un livre</Link>
       </div>
     </>
   )

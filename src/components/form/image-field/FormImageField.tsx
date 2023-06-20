@@ -1,6 +1,6 @@
 'use client'
 import { ImageIcon } from '@/assets/Image/Image'
-import { ChangeEvent, FormEventHandler, useRef, useState } from 'react'
+import { ChangeEvent, useRef, useState } from 'react'
 
 export default function FormImageField() {
   const fileRef = useRef<HTMLInputElement>(null)
